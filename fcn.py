@@ -24,7 +24,7 @@ print(f'\n\nShapes: x_train = {x_train.shape}, y_train = {y_train.shape}, x_test
 # Define hyperparameters:
 input_shape = x_train.shape[1:]
 num_classes = y_train.shape[1]
-batch_size = 256 
+batch_size = 256
 num_epochs = 100
 
 
@@ -39,7 +39,7 @@ conv2 = keras.layers.Conv1D(filters = 48, kernel_size = 1, padding = 'same')(con
 conv2 = keras.layers.BatchNormalization()(conv2)
 conv2 = keras.layers.ReLU()(conv2)
 
-conv3 = keras.layers.Conv1D(filters = 40, kernel_size = 1, padding = 'same')(conv2)
+conv3 = keras.layers.Conv1D(filters = 48, kernel_size = 1, padding = 'same')(conv2)
 conv3 = keras.layers.BatchNormalization()(conv3)
 conv3 = keras.layers.ReLU()(conv3)
 
